@@ -1,6 +1,6 @@
 ### Usage:
 #### timelapse.py
-python src/timelapse.py 10s 1s
+`python src/timelapse.py 10s 1s`
 
 
 first argument is input_time
@@ -20,11 +20,13 @@ number of frames = 10s * 30fps = 300
 time between photos = 600s / 300 frames = 2s
 
 
+VideoCapture index might need to be changed in the code to get correct camera
+
 
 #### images_to_video.py
 Format images into mp4 video
 
-python src/images_to_video.py output/2022-09-03T21:42:22
+`python src/images_to_video.py output/2022-09-03T21:42:22`
 
 finds all .png images in directory then creates timelapse.mp4
 
