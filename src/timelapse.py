@@ -4,7 +4,6 @@ import cv2
 import sys
 import os
 import numpy as np
-import time
 import datetime
 from pytimeparse.timeparse import timeparse
 
@@ -52,8 +51,7 @@ for i in range(nframes):
 
     frames.append(img)
 
-
-    time.sleep(interval)
+    cv2.waitKey(int(interval * 1000))
 
 
 cv2.destroyAllWindows()
