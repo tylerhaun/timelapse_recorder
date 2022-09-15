@@ -6,6 +6,8 @@ import os
 import numpy as np
 import datetime
 from pytimeparse.timeparse import timeparse
+import time
+
 
 output_fps = 30
 
@@ -33,8 +35,11 @@ print("interval")
 print(interval)
 
 
-cap = cv2.VideoCapture(2)
-
+cap = cv2.VideoCapture(1)
+time.sleep(3)
+ret, img = cap.read()
+cv2.imshow('current_image',img)
+cv2.waitKey(int(interval * 1000))
 
 frames = []
 
@@ -64,3 +69,5 @@ for frame in frames:
     writer.write(frame)
 writer.release()
 
+print("wrote to file")
+print(video_path)
